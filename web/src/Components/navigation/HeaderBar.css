@@ -1,20 +1,100 @@
-
 header {
-    display: flex;
-    justify-content: center;
-    background-color: #24292f;
-    color: var(--header-text-color);
-    height: 4rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  height: 4rem;
 }
 
 .header-container {
-    justify-content: space-between;
-    height: 100%;
-    width: 95%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 97%;
 }
-.github-logo{
-    fill: var(--header-text-color);
+
+.header-container__right-side {
+  width: 40rem;
+  display: flex;
+  flex-direction: row;
 }
+
+.searching-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.1px solid var(--grey-color--default);
+  border-radius: 5px;
+  height: 2rem;
+  width: 17rem;
+}
+
+.searching-bar input {
+  padding-left: 0.5rem;
+  width: 100%;
+  background-color: var(--header-bckground-color);
+  border: 0rem;
+  font-size: medium;
+  color: var(--grey-color--default);
+}
+.searching-bar input::placeholder {
+  color: var(--grey-color--default);
+  font-size: small;
+}
+
+.searching-bar span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1px solid var(--grey-color--default);
+  border-radius: 4px;
+  height: 0.8rem;
+  width: 1rem;
+  font-size: small;
+  margin-right: 0.3rem;
+  padding-bottom: 0.2rem;
+  cursor: default;
+}
+
+.github-logo {
+  fill: var(--header-text-color);
+  margin-right: 1rem;
+}
+
 .github-logo:hover {
-    fill: var(--header-text-color--hover);
+  fill: var(--grey-color--default);
+}
+
+.header-container__right-side ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.header-container__right-side li {
+  margin-left: 1rem;
+}
+
+.header-container__left-side img {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+}
+
+.header-container__left-side {
+  display: flex;
+  flex-direction: row;
+}
+.triangle-shape {
+  clip-path: polygon(50% 50%, 100% 0%, 0 0%);
+  background-color: #003bde;
+  width: 0.55rem;
+  height: 0.55rem;
 }

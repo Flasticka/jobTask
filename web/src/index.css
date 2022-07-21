@@ -1,7 +1,9 @@
 :root {
-  --header-text-color: rgb(255, 255, 255,0.9);
-  --header-text-color--hover: rgb(255, 255, 255,0.5);
+  --header-text-color: rgb(255, 255, 255, 0.9);
+  --grey-color--default: rgb(255, 255, 255, 0.7);
+  --header-background-color: #24292f;
 }
+
 body {
   background-color: #fff;
   margin: 0;
@@ -15,4 +17,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+a {
+  text-decoration: none;
+  color: var(--header-text-color);
 }

@@ -1,8 +1,8 @@
-import {HeaderBar} from './Components/navigation/HeaderBar.jsx'
+import { HeaderBar } from './Components/navigation/HeaderBar.jsx';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <HeaderBar />
     </div>
   );
