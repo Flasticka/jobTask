@@ -1,0 +1,62 @@
+.watch-button button,
+.two-buttons {
+  font-weight: bold;
+  font-size: 0.75rem;
+  height: 1.6rem;
+  width: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--grey-color--default);
+  border-radius: 5px;
+  padding: 0 0.5rem;
+}
+.two-buttons {
+  height: 1.5rem;
+}
+
+.two-buttons,
+.watch-button {
+  margin-left: 0.5rem;
+}
+.two-buttons__first-button,
+.two-buttons__second-button {
+  height: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border: 0;
+  cursor: pointer;
+}
+.two-buttons__first-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  border-right: 1px solid var(--grey-color--default);
+  padding: 0;
+  padding-right: 0.3rem;
+}
+
+.watch-button button:hover {
+  cursor: pointer;
+}
+.number-span {
+  border-radius: 100px;
+  width: 2rem;
+  background-color: rgb(230, 225, 225);
+  padding: 0.15rem;
+}
+
+.triangle-shape--no-hover {
+  margin-top: 0.2rem;
+  clip-path: polygon(50% 50%, 100% 0%, 0 0%);
+  background-color: var(--header-background-color);
+  width: 0.55rem;
+  height: 0.55rem;
+}
+
+.upper-part__right-side {
+  display: flex;
+  flex-direction: row;
+}

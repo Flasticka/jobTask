@@ -1,7 +1,8 @@
 :root {
-  --header-text-color: rgb(255, 255, 255, 0.9);
-  --grey-color--brighter: rgb(255, 255, 255, 0.8);
-  --grey-color--default: rgb(255, 255, 255, 0.5);
+  --header-text-color: rgba(255, 255, 255, 0.9);
+  --grey-color--brighter: rgba(255, 255, 255, 0.8);
+  --grey-color--default: rgb(182, 177, 177);
+  --grey-color-darker: rgba(93, 88, 88, 0.1);
   --header-background-color: #24292f;
 }
 

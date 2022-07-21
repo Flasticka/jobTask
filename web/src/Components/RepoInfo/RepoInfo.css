@@ -1,0 +1,19 @@
+.repo-info-container-outter {
+  display: flex;
+  justify-content: center;
+  background-color: var(--grey-color-darker);
+}
+.repo-info-container-inner {
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  height: 7rem;
+}
+
+.repo-info-container__upper-part {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

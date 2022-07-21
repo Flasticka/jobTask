@@ -1,0 +1,20 @@
+.repo-name {
+  font-size: large;
+  color: rgb(75, 75, 240);
+}
+.repo-name--bold {
+  font-weight: bold;
+}
+.separator {
+  margin: 0 0.5rem;
+}
+.repo-visibility {
+  font-size: small;
+  margin-left: 0.5rem;
+  padding: 0 0.5rem;
+  border: 1px solid var(--grey-color-darker);
+  border-radius: 100px;
+  color: grey;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}

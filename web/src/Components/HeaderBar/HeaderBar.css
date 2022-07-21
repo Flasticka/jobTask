@@ -129,16 +129,6 @@ header {
   padding-bottom: 0.5rem;
 }
 
-.triangle-shape {
-  clip-path: polygon(50% 50%, 100% 0%, 0 0%);
-  background-color: var(--header-text-color);
-  width: 0.55rem;
-  height: 0.55rem;
-}
-.triangle-shape:hover {
-  background-color: var(--grey-color--default);
-}
-
 .header-container__left-side > div a {
   padding-left: 1rem;
   font-size: x-large;
@@ -150,4 +140,13 @@ header {
 
 .header-container__left-side > div a > * {
   margin-right: 0.3rem;
+}
+.triangle-shape {
+  clip-path: polygon(50% 50%, 100% 0%, 0 0%);
+  background-color: var(--header-text-color);
+  width: 0.55rem;
+  height: 0.55rem;
+}
+.triangle-shape:hover {
+  background-color: var(--grey-color--default);
 }
