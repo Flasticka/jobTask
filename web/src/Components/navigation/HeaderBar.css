@@ -12,11 +12,11 @@ header {
   flex-direction: row;
   align-items: center;
   height: 100%;
-  width: 97%;
+  width: 96%;
 }
 
 .header-container__right-side {
-  width: 40rem;
+  width: 60rem;
   display: flex;
   flex-direction: row;
 }
@@ -28,16 +28,37 @@ header {
   border: 0.1px solid var(--grey-color--default);
   border-radius: 5px;
   height: 2rem;
-  width: 17rem;
 }
 
 .searching-bar input {
+  height: inherit;
   padding-left: 0.5rem;
-  width: 100%;
+  width: 14.5rem;
   background-color: var(--header-bckground-color);
   border: 0rem;
   font-size: medium;
   color: var(--grey-color--default);
+  transition: 200ms;
+}
+
+.searching-bar span {
+  display: none;
+}
+
+.searching-bar input:focus {
+  background-color: var(--header-text-color);
+  width: 30rem;
+  outline: none;
+  transition: 200ms;
+  border-radius: 5px;
+  border: 0rem;
+  color: black;
+}
+.searching-bar input:focus::placeholder {
+  color: rgb(0, 0, 0, 0.5);
+}
+.searching-bar input:focus + span {
+  display: none;
 }
 .searching-bar input::placeholder {
   color: var(--grey-color--default);
@@ -57,13 +78,16 @@ header {
   padding-bottom: 0.2rem;
   cursor: default;
 }
-
 .github-logo {
-  fill: var(--header-text-color);
   margin-right: 1rem;
 }
+.github-logo,
+.bell-logo a {
+  fill: var(--header-text-color);
+}
 
-.github-logo:hover {
+.github-logo:hover,
+.bell-logo a:hover {
   fill: var(--grey-color--default);
 }
 
@@ -81,6 +105,10 @@ header {
 .header-container__right-side li {
   margin-left: 1rem;
 }
+.header-container__right-side li a:hover,
+.header-container__left-side div a:hover {
+  color: var(--grey-color--default);
+}
 
 .header-container__left-side img {
   width: 1.3rem;
@@ -91,10 +119,35 @@ header {
 .header-container__left-side {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
+
+.plus-symbol {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 .triangle-shape {
   clip-path: polygon(50% 50%, 100% 0%, 0 0%);
-  background-color: #003bde;
+  background-color: var(--header-text-color);
   width: 0.55rem;
   height: 0.55rem;
+}
+.triangle-shape:hover {
+  background-color: var(--grey-color--default);
+}
+
+.header-container__left-side > div a {
+  padding-left: 1rem;
+  font-size: x-large;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 1rem;
+}
+
+.header-container__left-side > div a > * {
+  margin-right: 0.3rem;
 }

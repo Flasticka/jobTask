@@ -1,6 +1,7 @@
 :root {
   --header-text-color: rgb(255, 255, 255, 0.9);
-  --grey-color--default: rgb(255, 255, 255, 0.7);
+  --grey-color--brighter: rgb(255, 255, 255, 0.8);
+  --grey-color--default: rgb(255, 255, 255, 0.5);
   --header-background-color: #24292f;
 }
 

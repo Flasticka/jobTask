@@ -10,9 +10,7 @@ export const HeaderBar = () => {
             <GitHubLogo />
           </a>
           <div className='searching-bar'>
-            <form>
-              <input type='text' placeholder='Search or jump to...' />
-            </form>
+            <input type='text' placeholder='Search or jump to...' />
             <span>/</span>
           </div>
           <ul>
@@ -31,16 +29,25 @@ export const HeaderBar = () => {
           </ul>
         </div>
         <div className='header-container__left-side'>
-          <BellLogo />
-          <div>
-            +<div className='triangle-shape'></div>
+          <div className='bell-logo'>
+            <a href='.'>
+              <BellLogo />
+            </a>
           </div>
           <div>
-            <img
-              src='https://avatars.githubusercontent.com/u/84079159?s=40&v=4'
-              alt='avatar'
-            />
-            <div className='triangle-shape'></div>
+            <a href='.'>
+              <span className='plus-symbol'>+</span>
+              <div className='triangle-shape'></div>
+            </a>
+          </div>
+          <div>
+            <a href='.'>
+              <img
+                src='https://avatars.githubusercontent.com/u/84079159?s=40&v=4'
+                alt='avatar'
+              />
+              <div className='triangle-shape'></div>
+            </a>
           </div>
         </div>
       </div>
