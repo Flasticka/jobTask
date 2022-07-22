@@ -43,9 +43,8 @@
 }
 .number-span {
   border-radius: 100px;
-  width: 2rem;
   background-color: rgb(230, 225, 225);
-  padding: 0.15rem;
+  padding: 0.1rem 0.3rem;
 }
 
 .triangle-shape--no-hover {

@@ -1,5 +1,5 @@
-import './UpperPartLeftSide.css';
-export const UpperPartLeftSide = () => {
+import './UpperPartRepoLeftSide.css';
+export const UpperPartRepoLeftSide = () => {
   return (
     <div className='upper-part__left-side'>
       <a href='.' className='repo-name'>

@@ -1,0 +1,27 @@
+.no-bordered-button-container__button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0;
+  border-radius: 5px;
+  padding: 0.4rem;
+  margin: 0.4rem 0.2rem;
+  font-size: 0.9rem;
+}
+.no-bordered-button-container__button:hover {
+  background-color: var(--grey-color-darker);
+}
+.no-bordered-button-container__number-span {
+  border-radius: 100px;
+  background-color: rgb(230, 225, 225);
+  padding: 0.1rem 0.3rem;
+  font-size: smaller;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+.no-bordered-button-container {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem 0.5rem 0;
+}

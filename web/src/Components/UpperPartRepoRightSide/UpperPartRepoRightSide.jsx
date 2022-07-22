@@ -1,6 +1,6 @@
-import './UpperPartRightSide.css';
+import './UpperPartRepoRightSide.css';
 
-export const UpperPartRightSide = () => {
+export const UpperPartRepoRightSide = () => {
   return (
     <div className='upper-part__right-side'>
       <div className='watch-button'>
