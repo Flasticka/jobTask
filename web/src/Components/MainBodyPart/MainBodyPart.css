@@ -1,0 +1,5 @@
+.main-body-part-container {
+  border: 1px solid var(--grey-color--default);
+  border-radius: 5px;
+  margin-top: 1rem;
+}

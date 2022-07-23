@@ -1,0 +1,32 @@
+.status-container button {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: auto;
+  height: 1.2rem;
+  padding: 0;
+  margin: 1rem 0rem 1rem 1rem;
+  border: 0;
+  cursor: pointer;
+}
+.status-container button:hover {
+  color: black;
+}
+
+.status-container {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.status-container button > * {
+  margin-left: 0.2rem;
+}
+.closed-status {
+  margin-bottom: 0.2rem;
+  font-weight: bolder;
+}
+.status-container button > span {
+  margin-top: 0.1rem;
+  color: inherit;
+}

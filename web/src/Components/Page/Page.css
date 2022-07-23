@@ -1,0 +1,29 @@
+.circle-border {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.circle-inner {
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: black;
+  border-radius: 50%;
+}
+.circle-border span {
+  height: inherit;
+  width: inherit;
+}
+
+.page_header {
+  background-color: var(--grey-color-darker);
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--grey-color--default);
+}
