@@ -1,0 +1,85 @@
+.upper-body-part-container {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  height: 1.8rem;
+}
+.upper-body-part-container__searching-bar {
+  height: 100%;
+  width: 66%;
+  border: 1px solid var(--grey-color--default);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.searching-bar__filter-button,
+.buttons_labels,
+.buttons_milestones {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  height: 100%;
+  width: 5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.searching-bar__filter-button,
+.buttons_labels {
+  border-right: 1px solid var(--grey-color--default);
+}
+
+.searching-bar__search-bar {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background-color: var(--grey-color-darker);
+}
+
+.upper-body-part-container__buttons {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.double-button {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--grey-color--default);
+  border-radius: 5px;
+  height: 100%;
+  margin-left: 1rem;
+}
+.double-button button {
+  background-color: var(--header-text-color);
+  width: auto;
+  padding: 0.2rem 1rem;
+}
+
+.double-button button:hover {
+  background-color: var(--grey-color-darker);
+}
+
+.double-button .number-span {
+  margin-left: 0.3rem;
+  font-size: smaller;
+}
+
+.new-issue-button {
+  height: 1.9rem;
+  width: auto;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgb(8, 154, 8);
+  color: var(--header-text-color);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.2rem 1rem;
+  margin-left: 1rem;
+}
+.new-issue-button:hover {
+  background-color: rgb(15, 180, 15);
+}
