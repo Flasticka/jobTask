@@ -1,6 +1,6 @@
 import Popup from 'reactjs-popup';
 import './FilterOptions.css';
-export const FilterOptions = () => {
+export const FilterOptions = ({ orderType, setOrderType }) => {
   return (
     <div className='filter-option-container'>
       <button>
@@ -33,9 +33,42 @@ export const FilterOptions = () => {
       >
         <div className='pop-up-window'>
           <span>Sort</span>
-          <button>Newest</button>
-          <button>Most comented</button>
-          <button>Least comented</button>
+          <button
+            className={`${
+              orderType === 'issue-number'
+                ? 'pop-up-window__selected-button'
+                : ''
+            }`}
+            onClick={() => {
+              setOrderType('issue-number');
+            }}
+          >
+            Issue number
+          </button>
+          <button
+            className={`${
+              orderType === 'most-commented'
+                ? 'pop-up-window__selected-button'
+                : ''
+            }`}
+            onClick={() => {
+              setOrderType('most-commented');
+            }}
+          >
+            Most comented
+          </button>
+          <button
+            className={`${
+              orderType === 'least-commented'
+                ? 'pop-up-window__selected-button'
+                : ''
+            }`}
+            onClick={() => {
+              setOrderType('least-commented');
+            }}
+          >
+            Least comented
+          </button>
         </div>
       </Popup>
     </div>

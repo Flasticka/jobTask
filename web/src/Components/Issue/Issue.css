@@ -1,0 +1,67 @@
+.issue-container {
+  height: 4rem;
+  padding: 1rem 0rem 1rem 1.5rem;
+  border-top: 1px solid var(--grey-color--default);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.issue-container:hover {
+  background-color: var(--grey-color-darker);
+}
+.issue-container--closed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  margin-bottom: 0.13rem;
+  color: red;
+}
+.issue-container .circle-inner {
+  background-color: green;
+}
+.issue-container__title {
+  display: flex;
+  width: auto;
+  height: auto;
+  border: 0;
+  background-color: inherit;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+.issue-container__title:hover {
+  color: blue;
+}
+.issue-container__right-part-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0.5rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.issue-container__commets-container {
+  margin-right: 1rem;
+}
+.commets-container__comments {
+  margin-left: 0.5rem;
+}
+.issue-container__title-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.issue-container__title-container div {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.issue-container__title-container div span ~ span {
+  margin-left: 0.3rem;
+}

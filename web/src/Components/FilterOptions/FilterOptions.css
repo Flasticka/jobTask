@@ -41,3 +41,6 @@
   background-color: var(--header-text-color);
   cursor: pointer;
 }
+.pop-up-window__selected-button {
+  font-weight: bold;
+}
