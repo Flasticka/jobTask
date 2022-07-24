@@ -1,17 +1,17 @@
 import './Issue.css';
 import moment from 'moment';
-export const Issue = (issue) => {
-  console.log(issue.issue.state);
+import { Link } from 'react-router-dom';
+export const Issue = ({ issue, setIssue, setPage }) => {
+  console.log(issue.state);
   return (
     <div className='issue-container'>
       <div
         className='circle-border'
         style={{
-          border:
-            issue.issue.state === 'open' ? '3px solid green' : '3px solid red',
+          border: issue.state === 'open' ? '3px solid green' : '3px solid red',
         }}
       >
-        {issue.issue.state === 'open' ? (
+        {issue.state === 'open' ? (
           <div className='circle-inner'></div>
         ) : (
           <div className='issue-container--closed'>/</div>
@@ -19,22 +19,30 @@ export const Issue = (issue) => {
       </div>
       <div className='issue-container__right-part-container'>
         <div className='issue-container__title-container'>
-          <button onClick={() => {}} className='issue-container__title'>
-            {issue.issue.title}
-          </button>
+          <Link to='/issue'>
+            <button
+              onClick={() => {
+                setIssue(issue);
+              }}
+              className='issue-container__title'
+            >
+              {issue.title}
+            </button>
+          </Link>
+
           <div>
-            <span>{`#${issue.issue.issueNumber}`}</span>
-            <span>{issue.issue.state === 'open' ? 'opened' : 'closed'}</span>
+            <span>{`#${issue.issueNumber}`}</span>
+            <span>{issue.state === 'open' ? 'opened' : 'closed'}</span>
             <span>
-              {issue.issue.state === 'open'
-                ? moment(issue.issue.created).fromNow()
-                : moment(issue.issue.closed).fromNow()}
+              {issue.state === 'open'
+                ? moment(issue.created).fromNow()
+                : moment(issue.closed).fromNow()}
             </span>
           </div>
         </div>
 
         <div className='issue-container__commets-container'>
-          <span>{issue.issue.commentsCount}</span>
+          <span>{issue.commentsCount}</span>
           <span className='commets-container__comments'>comments</span>
         </div>
       </div>

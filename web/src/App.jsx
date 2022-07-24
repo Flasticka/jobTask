@@ -1,20 +1,18 @@
-import { HeaderBar } from './Components/HeaderBar/HeaderBar.jsx';
-import { RepoInfo } from './Components/RepoInfo/RepoInfo.jsx';
-import { BodyPart } from './Components/BodyPart/BodyPart.jsx';
-import { Footer } from './Components/Footer/Footer.jsx';
-import './App.css';
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { IssuePage } from './Components/IssuePage/IssuePage.jsx';
+import { MainPage } from './Components/MainPage/MainPage.jsx';
 
 function App() {
+  const [issue, setIssue] = useState(null);
   return (
     <div className='App'>
-      <HeaderBar />
-      <RepoInfo />
-      <BodyPart />
-      <div className='hr-container'>
-        <hr></hr>
-      </div>
-
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<MainPage setIssue={setIssue} />}></Route>
+          <Route path='/issue' element={<IssuePage issue={issue} />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

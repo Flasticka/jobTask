@@ -11,6 +11,7 @@ export const Page = ({
   selectedPageNumber,
   setSelectedPageNumber,
   setDisplayIssuesLength,
+  setIssue,
 }) => {
   const [openIssues] = useState(openIssuesData);
   const [closedIssues] = useState(closedIssuesData);
@@ -77,7 +78,7 @@ export const Page = ({
       </div>
       <div className='page_body'>
         {displayIssuesPage.map((issue) => (
-          <Issue issue={issue} />
+          <Issue issue={issue} setIssue={setIssue} />
         ))}
       </div>
     </div>

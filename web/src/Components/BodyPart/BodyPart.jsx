@@ -1,12 +1,12 @@
 import { UpperBodyPart } from '../UpperBodyPart/UpperBodyPart';
 import { MainBodyPart } from '../MainBodyPart/MainBodyPart';
 import './BodyPart.css';
-export const BodyPart = () => {
+export const BodyPart = ({ setIssue, setPage }) => {
   return (
     <div className='body-container-outer'>
       <div className='body-container-inner'>
         <UpperBodyPart />
-        <MainBodyPart />
+        <MainBodyPart setIssue={setIssue} setPage={setPage} />
       </div>
     </div>
   );
