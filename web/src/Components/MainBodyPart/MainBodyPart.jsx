@@ -4,11 +4,20 @@ import './MainBodyPart.css';
 
 import { useState } from 'react';
 export const MainBodyPart = () => {
-  const [pageNumber, setPageNumber] = useState(1);
+  const [selectedPageNumber, setSelectedPageNumber] = useState(1);
+  const [displayIssuesLength, setDisplayIssuesLength] = useState(0);
   return (
     <div className='main-body-part-container'>
-      <Page />
-      <PaginationBar />
+      <Page
+        selectedPageNumber={selectedPageNumber}
+        setSelectedPageNumber={setSelectedPageNumber}
+        setDisplayIssuesLength={setDisplayIssuesLength}
+      />
+      <PaginationBar
+        selectedPageNumber={selectedPageNumber}
+        setSelectedPageNumber={setSelectedPageNumber}
+        displayIssuesLength={displayIssuesLength}
+      />
     </div>
   );
 };

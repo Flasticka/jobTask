@@ -7,15 +7,18 @@ import { useState } from 'react';
 import './Page.css';
 import { useEffect } from 'react';
 
-export const Page = () => {
-  const [openIssues, setOpenIssues] = useState(openIssuesData);
-  const [closedIssues, setClosedIssues] = useState(closedIssuesData);
+export const Page = ({
+  selectedPageNumber,
+  setSelectedPageNumber,
+  setDisplayIssuesLength,
+}) => {
+  const [openIssues] = useState(openIssuesData);
+  const [closedIssues] = useState(closedIssuesData);
   const [displayIssuesState, setDisplayIssuesState] = useState([]);
   const [displayIssuesOrder, setDisplayIssuesOrder] = useState([]);
   const [displayIssuesPage, setDisplayIssuesPage] = useState([]);
   const [isOpenSelected, setIsOpenSelected] = useState(true);
   const [orderType, setOrderType] = useState('issue-number');
-  const [selectedPageNumber, setSelectedPageNumber] = useState(1);
 
   useEffect(() => {
     if (isOpenSelected) {
@@ -25,7 +28,10 @@ export const Page = () => {
     }
     setOrderType('issue-number');
     setSelectedPageNumber(1);
-  }, [isOpenSelected, openIssues, closedIssues]);
+  }, [isOpenSelected, openIssues, closedIssues, setSelectedPageNumber]);
+  useEffect(() => {
+    setDisplayIssuesLength(displayIssuesState.length);
+  }, [displayIssuesState, setDisplayIssuesLength]);
 
   useEffect(() => {
     if (orderType === 'issue-number') {
@@ -47,19 +53,19 @@ export const Page = () => {
     }
 
     setSelectedPageNumber(1);
-  }, [orderType, displayIssuesState]);
+  }, [orderType, displayIssuesState, setSelectedPageNumber]);
 
   useEffect(() => {
     setDisplayIssuesPage(
       displayIssuesOrder.slice(
         5 * (selectedPageNumber - 1),
-        selectedPageNumber + 4
+        5 * (selectedPageNumber - 1) + 5
       )
     );
   }, [selectedPageNumber, displayIssuesOrder]);
 
   return (
-    <div>
+    <div className='page-container'>
       <div className='page_header'>
         <StatusPart
           isOpenSelected={isOpenSelected}

@@ -1,0 +1,14 @@
+hr {
+  margin: 3rem 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 83%;
+  height: 0.5px;
+  border: 0;
+  background-color: var(--grey-color--default);
+}
+.hr-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,0 +1,22 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2.5rem;
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+}
+.footer-container button {
+  border: 0;
+  color: blue;
+  font-size: smaller;
+  background-color: var(--header-text-color);
+  cursor: pointer;
+}
+.footer-container button:hover {
+  text-decoration: underline;
+}
